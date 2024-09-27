@@ -12,7 +12,7 @@ const LoveMeApp = () => {
     alert('Yes, you are right');
   };
 
-  const handleNoMouseOver = () => {
+  const moveButton = () => {
     const aWidth = window.innerWidth;
     const aHeight = window.innerHeight;
     const randomTop = Math.floor(Math.random() * aHeight) + 'px';
@@ -74,27 +74,32 @@ const LoveMeApp = () => {
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
         />
       </div>
-      <div id="Bn" className="absolute" style={buttonStyle}>
+      <div
+        id="Bn"
+        className="absolute"
+        style={buttonStyle}
+        onMouseOver={moveButton}
+        onTouchStart={moveButton}
+      >
         <input
           type="button"
           value=" N o "
-          onMouseOver={handleNoMouseOver}
           onClick={handleNoClick}
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
         />
       </div>
       <div className="text-center mt-12 font-normal text-base text-gray-700">
-        
+        <p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
         <p>
-          
+          来源：
           <a
-            title="love me app"
+            title="html5实例,css3实例,jquery实例"
             href="http://www.w2bc.com/shili"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600"
           >
-            
+            html5实例,css3实例,jquery实例
           </a>
         </p>
       </div>
