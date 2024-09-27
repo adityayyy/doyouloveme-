@@ -53,10 +53,6 @@ const LoveMeApp = () => {
     });
   };
 
-  const handleNoClick = () => {
-    alert('你竟然点到了，厉害');
-  };
-
   return (
     <div className="relative min-h-screen bg-gray-100 flex flex-col items-center justify-center">
       <h1 className="absolute text-3xl font-bold text-gray-800" style={{ left: '220px', top: '175px' }}>
@@ -79,13 +75,12 @@ const LoveMeApp = () => {
         className="absolute"
         style={buttonStyle}
         onMouseOver={moveButton}
-        onTouchStart={moveButton}
+        onClick={moveButton}
       >
         <input
           type="button"
           value=" N o "
-          onClick={handleNoClick}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
         />
       </div>
       <div className="text-center mt-12 font-normal text-base text-gray-700">
