@@ -53,6 +53,10 @@ const LoveMeApp = () => {
     });
   };
 
+  const handleNoClick = () => {
+    alert();
+  };
+
   return (
     <div className="relative min-h-screen bg-gray-100 flex flex-col items-center justify-center">
       <h1 className="absolute text-3xl font-bold text-gray-800" style={{ left: '220px', top: '175px' }}>
@@ -75,20 +79,19 @@ const LoveMeApp = () => {
         className="absolute"
         style={buttonStyle}
         onMouseOver={moveButton}
-        onClick={moveButton}
+        onTouchStart={moveButton}
       >
         <input
           type="button"
           value=" N o "
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
+          onClick={handleNoClick}
+          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
         />
       </div>
       <div className="text-center mt-12 font-normal text-base text-gray-700">
-        <p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
         <p>
-          来源：
           <a
-            title="html5实例,css3实例,jquery实例"
+            title="doyouloveme?"
             href="http://www.w2bc.com/shili"
             target="_blank"
             rel="noopener noreferrer"
